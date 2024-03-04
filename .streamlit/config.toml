@@ -1,6 +1,6 @@
 [theme]
-primaryColor="#FFD700"
-backgroundColor="#F0E68C"
-secondaryBackgroundColor="#E6E6FA"
-textColor="#000080"
+primaryColor="#FFA500"  # A vibrant shade of orange
+backgroundColor="#FFF5E1"  # A light orange background that's easy on the eyes
+secondaryBackgroundColor="#FFE4B5"  # A softer orange for secondary elements
+textColor="#005A9C"  # A deep blue for contrast with orange
 font="sans serif"
