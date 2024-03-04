@@ -15,7 +15,7 @@ st.set_page_config(page_title="Einstein", page_icon="📄")
 import streamlit as st
 
 # Define the path to your avatar image
-avatar_path = "einstein2.jpeg"
+avatar_path = "einstein1.jpeg"
 st.image(avatar_path, width=100)
 st.header('Einstein')
 
