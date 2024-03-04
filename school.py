@@ -19,7 +19,7 @@ avatar_path = "einstein1.jpg"
 
 
 # Define the path to your avatar image
-avatar_path = "avatar.jpg"
+avatar_path = "einstein1.jpg"
 
 st.image(avatar_path, width=100)  # Adjust the width as needed
 
