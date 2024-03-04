@@ -16,6 +16,7 @@ import streamlit as st
 
 # Define the path to your avatar image
 avatar_path = "einstein2.jpeg"
+st.image(avatar_path, width=100)
 st.header('Einstein')
 
 st.write('Lets learn something new today!')
