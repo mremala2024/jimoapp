@@ -39,16 +39,17 @@ def display_msg(msg, author):
     st.chat_message(author).write(msg)
 
 def configure_openai_api_key():
-    openai_api_key = st.sidebar.text_input(
-        label="OpenAI API Key",
-        type="password",
-        value=st.session_state['OPENAI_API_KEY'] if 'OPENAI_API_KEY' in st.session_state else '',
-        placeholder="sk-..."
-        )
+    # Try to get the OpenAI API key from environment variables
+    openai_api_key = os.getenv('OPENAI_API_KEY', '')
+    
     if openai_api_key:
+        # If the key is found, set it in Streamlit's session state and the environment (for consistency)
         st.session_state['OPENAI_API_KEY'] = openai_api_key
         os.environ['OPENAI_API_KEY'] = openai_api_key
     else:
-        st.error("Please add your OpenAI API key to continue.")
+        # If not found, show an error message and stop the app
+        st.error("Please set your OpenAI API key in the environment variables to continue.")
         st.stop()
+        
     return openai_api_key
+
