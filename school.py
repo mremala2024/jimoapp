@@ -17,14 +17,19 @@ import streamlit as st
 # Define the path to your avatar image
 avatar_path = "einstein1.jpg"
 
+# Process the image to add rounded corners
+rounded_image = add_rounded_corners(avatar_path, radius=20)
 
-# Define the path to your avatar image
-avatar_path = "einstein1.jpg"
+# Use columns to layout the image and text
+col1, col2 = st.columns([1, 3])  # Adjust the ratio as needed
 
-st.image(avatar_path, width=100)  # Adjust the width as needed
+with col1:
+    # Display the image in the first column
+    st.image(rounded_image, width=100)  # Adjust width as needed
 
-# Display your message in the second column
-st.header('Einstein')
+with col2:
+    # Display your text in the second column
+    st.header("Einstein")
 
 st.write('Lets learn something new today!')
 
