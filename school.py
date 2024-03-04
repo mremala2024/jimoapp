@@ -17,16 +17,8 @@ import streamlit as st
 # Define the path to your avatar image
 avatar_path = "einstein2.jpeg"
 st.header('Einstein')
-# Create a layout with columns: one for the avatar and one for the text
-col1, col2 = st.columns([1, 4])  # Adjust the ratio as needed
 
-# Display the avatar in the first column
-with col1:
-    st.image(avatar_path, width=100)  # Adjust the width as needed
-
-# Display your message in the second column
-with col2:
-    st.write('Lets learn something new today!')
+st.write('Lets learn something new today!')
 
 class CustomDataChatbot:
 
